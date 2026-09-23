@@ -1,0 +1,73 @@
+/* =========================================================
+   GameZone - Semana 7 (React)
+   Hoja de estilos propia, cargada después de Bootstrap para
+   poder sobrescribir puntualmente y mantener la identidad
+   visual de marca de GameZone entre semanas del proyecto.
+   ========================================================= */
+
+:root {
+  --gz-primario: #6f1ab8;
+  --gz-primario-oscuro: #4b0f80;
+  --gz-acento: #ffc107;
+}
+
+body {
+  background-color: #16181d;
+}
+
+.bg-primary-gz {
+  background: linear-gradient(90deg, var(--gz-primario-oscuro), var(--gz-primario));
+}
+
+/* Tarjetas de producto */
+.producto-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.producto-card:hover,
+.producto-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+.producto-card img {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.badge-oferta {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.precio-normal {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gz-acento);
+}
+.precio-anterior {
+  text-decoration: line-through;
+  color: var(--bs-secondary-color);
+  font-size: 0.9rem;
+}
+.precio-oferta {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ff6b6b;
+}
+
+/* Carrito */
+.carrito-card .card-header {
+  background: var(--gz-primario-oscuro);
+  color: #fff;
+}
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.item-carrito .nombre-item {
+  font-weight: 600;
+}
